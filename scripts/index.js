@@ -25,7 +25,16 @@ var t6 = -650;
 
 var oldScrollY = -1;
 
+let prevScrollpos = window.pageYOffset;
+
 window.onscroll = function (e) {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("nav").style.top = "0";
+  } else {
+    document.getElementById("nav").style.top = "-100%";
+  }
+  prevScrollpos = currentScrollPos;
   var ele = document.querySelectorAll(".slide-text");
   if (!(oldScrollY > this.scrollY)) {
     this.scrollY < 300 && t0 < 1 ? (t0 = this.scrollY * td0) : (t0 = 1);
@@ -101,4 +110,4 @@ window.onload = function () {
   }, 1000);
 };
 
-function pointerImage() {}
+
