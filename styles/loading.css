@@ -15,6 +15,24 @@
   font-family: "Prompt", sans-serif;
 }
 
+#loading-img-overlay-pattern {
+  position: absolute;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0.8;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.6) 50%,
+    rgba(229, 229, 247, 0) 50%
+  );
+  background-size: 5px 5px;
+  z-index: 200;
+}
+
 .loading-page-header {
   font-weight: 600;
   font-size: 1.2rem;
