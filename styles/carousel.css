@@ -62,7 +62,6 @@ header {
 .active {
   color: #fff;
   font-weight: 600;
-  font-size: 1rem;
 }
 
 #header-image-text span:hover {

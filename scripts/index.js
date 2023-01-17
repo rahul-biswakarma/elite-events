@@ -80,7 +80,12 @@ window.onscroll = function (e) {
 
   var sec4Img1 = document.getElementById("sec-4-img-1");
   sec4Img1.style.transform = `translateY(${
-    Math.floor(this.scrollY * 0.05) - 160
+    Math.floor(this.scrollY * 0.05) - 220
+  }%)`;
+
+  var sec25p = document.querySelector("#section-2-5-1 p");
+  sec25p.style.transform = `translateY(${
+    Math.floor(this.scrollY * 0.05) - 120
   }%)`;
 
   var sec2Img = document.querySelector("#sec-2-img img");
@@ -109,5 +114,3 @@ window.onload = function () {
     });
   }, 1000);
 };
-
-
