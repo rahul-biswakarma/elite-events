@@ -14,6 +14,7 @@
   box-sizing: border-box;
   font-family: "Sofia Sans", sans-serif;
   scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
 }
 
 html {
@@ -34,6 +35,7 @@ main {
   opacity: 0;
   transition: all 2000ms ease-in-out;
 }
+
 
 *::-webkit-scrollbar {
   width: 5px;

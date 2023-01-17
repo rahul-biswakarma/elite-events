@@ -105,31 +105,13 @@ document.onpointerdown = function (e) {
   return false;
 };
 
-document.onmousewheel = function (e) {
-  e = e || window.event;
-  var d = e.wheelDelta / 20 || -e.detail;
-  radius += d;
-  init(1);
-};
+// document.onmousewheel = function (e) {
+//   e = e || window.event;
+//   var d = e.wheelDelta / 20 || -e.detail;
+//   radius += d;
+//   init(1);
+// };
 
 window.addEventListener("load", async (event) => {
   applyTranform(dragC);
 });
-
-// window.onload = function () {
-//   var requestAnimationFrame =
-//     window.requestAnimationFrame ||
-//     window.mozRequestAnimationFrame ||
-//     window.webkitRequestAnimationFrame ||
-//     window.msRequestAnimationFrame;
-
-//   requestAnimationFrame(updateValue);
-
-//   function updateValue() {
-//     var computedStyles = window.getComputedStyle(spinC);
-//     var rotation = computedStyles.getPropertyValue("transform");
-//     var rotationValue = parseInt(rotation.split(",")[1]);
-//     tX += rotationValue;
-//     tY += rotationValue;
-//   }
-// };
