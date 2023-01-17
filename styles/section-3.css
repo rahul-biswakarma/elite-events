@@ -1,0 +1,88 @@
+#section-3 {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 5rem 0;
+}
+
+.pointer-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#section-3 h2 {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 3rem;
+  text-transform: uppercase;
+}
+
+.moving-text-container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-55% + var(--offset));
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.moving-text-container-2 {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translate(0, 100%);
+  animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1);
+  animation-fill-mode: forwards;
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.moving-text {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 20s linear infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  line-height: 1;
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.moving-text span {
+  opacity: 0;
+  transform: translate(0, 100%);
+  line-height: 1;
+  font-size: 6vw;
+  padding: 0 4vw;
+  font-weight: 700;
+  text-transform: uppercase;
+  animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1);
+  animation-fill-mode: forwards;
+  color: #e6e6e6;
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  cursor: pointer;
+}
+
+.moving-text span :hover {
+  color: #000;
+}
+
+.moving-text-2 {
+  animation-name: marquee-reverse;
+}

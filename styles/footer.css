@@ -1,0 +1,55 @@
+footer {
+  position: relative;
+  background: #fff;
+  padding: 5rem 10rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-transform: uppercase;
+  transition: all 100ms ease-in-out;
+}
+
+footer h2 {
+  color: #000;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all 100ms ease-in-out;
+}
+
+.footer-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: start;
+  transition: all 100ms ease-in-out;
+}
+
+.footer-container h3 {
+  font-size: 0.7rem;
+}
+
+.footer-container p {
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#footer-arrow-button {
+  background: #000;
+  padding: 2rem 0.8rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 01rem;
+  bottom: 1rem;
+}
+
+#footer-arrow-button svg {
+  width: 20px;
+  transform: rotate(-90deg);
+}
