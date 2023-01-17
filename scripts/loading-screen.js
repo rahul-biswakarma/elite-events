@@ -26,8 +26,12 @@ function LoadingComplete() {
   }, 1000);
 
   setTimeout(function () {
-    document.getElementById("drag-container").style.transition = "none";
+    document.querySelector("body").style.overflow = "auto";
   }, 2000);
+
+  setTimeout(function () {
+    document.getElementById("drag-container").style.transition = "none";
+  }, 3000);
 }
 
 async function LoadingImageCarousel() {

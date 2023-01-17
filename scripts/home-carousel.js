@@ -115,3 +115,21 @@ document.onmousewheel = function (e) {
 window.addEventListener("load", async (event) => {
   applyTranform(dragC);
 });
+
+// window.onload = function () {
+//   var requestAnimationFrame =
+//     window.requestAnimationFrame ||
+//     window.mozRequestAnimationFrame ||
+//     window.webkitRequestAnimationFrame ||
+//     window.msRequestAnimationFrame;
+
+//   requestAnimationFrame(updateValue);
+
+//   function updateValue() {
+//     var computedStyles = window.getComputedStyle(spinC);
+//     var rotation = computedStyles.getPropertyValue("transform");
+//     var rotationValue = parseInt(rotation.split(",")[1]);
+//     tX += rotationValue;
+//     tY += rotationValue;
+//   }
+// };

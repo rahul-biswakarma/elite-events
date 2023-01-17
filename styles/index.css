@@ -5,7 +5,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Sofia Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,6 +18,8 @@ body {
   height: 100vh;
   background: #000;
   touch-action: none;
+
+  overflow: hidden;
 }
 
 main {
@@ -22,7 +29,7 @@ main {
 }
 
 #nav {
-  position: relative;
+  position: sticky;
   width: 100%;
   height: 100px;
   top: 0;
@@ -33,8 +40,19 @@ main {
   padding: 0 3rem;
   color: white;
   font-size: 1.2rem;
-  background: #000;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
   transition: all 300ms ease-in-out;
+  z-index: 1000;
+}
+
+.brand-name {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: all 100ms ease-in-out;
 }
 
 #nav ul {
@@ -45,9 +63,16 @@ main {
 
 #nav ul li a {
   text-decoration: none;
-  color: white;
-  font-size: 1rem;
+  color: #a6a6a6;
+  font-size: 0.8rem;
   font-weight: 500;
+  text-transform: uppercase;
+  transition: all 100ms ease-in-out;
+  padding: 0.5rem 1rem;
+}
+
+#nav ul li a:hover {
+  color: #fff;
 }
 
 .nav-icon-container {
@@ -71,8 +96,6 @@ main {
   gap: 1rem;
   padding: 8rem 0;
   overflow: hidden;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(40px);
 }
 
 .slide-text {
@@ -83,11 +106,43 @@ main {
   transform: translateX(-100%);
   transition: all 1000ms ease-in-out;
   padding: 0 3rem;
+  z-index: 10;
 }
 
 #section-2 {
+  position: relative;
   width: 100%;
-  background: url("../assets/images/security.png");
+  overflow: hidden;
+}
+
+.sec-2-black-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  transition: all 200ms ease-in-out;
+}
+
+#sec-2-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 200ms ease-in-out;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+#sec-2-img img {
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+  transform: all 200ms ease-in-out;
 }
 
 #section-3 {
@@ -113,9 +168,10 @@ main {
 #section-3 h2 {
   color: #000;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 700;
   text-align: center;
   padding-bottom: 3rem;
+  text-transform: uppercase;
 }
 
 .moving-text-container {
@@ -179,6 +235,7 @@ main {
 }
 
 #section-4 {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -186,35 +243,44 @@ main {
   flex-wrap: wrap;
   background: #fff;
   gap: 5rem;
+  transform: all 200ms ease-in-out;
 }
 
 #section-4 .sec-4-container {
+  position: relative;
   display: flex;
   gap: 5rem;
   background: #fff;
   padding: 5rem 0rem;
+  transform: all 200ms ease-in-out;
 }
 
 #section-4 .sec-4-container:nth-child(1) {
   width: 400px;
   gap: 2rem;
   font-weight: 500;
+  transform: all 200ms ease-in-out;
 }
 
 #section-4 .sec-4-container:nth-child(1) div:nth-child(1) {
   font-size: 2rem;
+  transform: all 200ms ease-in-out;
 }
 
 #section-4 .sec-4-container:nth-child(1) div:nth-child(2) {
   font-size: 1rem;
   margin-top: 20rem;
   line-height: 150%;
+  transform: all 200ms ease-in-out;
 }
 
 #sec-4-img-1 {
+  position: relative;
+  margin-top: 12rem;
   width: 360px;
   height: 480px;
   object-fit: cover;
+  transform: all 200ms ease-in-out;
 }
 
 #sec-4-img-2 {
@@ -222,6 +288,7 @@ main {
   width: 260px;
   height: 370px;
   object-fit: cover;
+  transform: all 200ms ease-in-out;
 }
 
 .sec-4-button {
@@ -243,7 +310,7 @@ main {
   flex-direction: column;
   width: 100%;
   background: #000;
-  padding: 5rem 10rem;
+  padding: 8rem 10rem;
 }
 
 #section-6 h2 {
@@ -269,12 +336,17 @@ main {
   padding: 0 2rem;
 }
 
+.sec-6-container p {
+  color: rgb(117, 117, 117);
+}
+
 .sec-6-container-2 {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+
   margin-top: 3rem;
   position: relative;
+  transition: all 100ms ease-in-out;
 }
 
 .sec-6-container-2 h3 {
@@ -282,10 +354,11 @@ main {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
+  transition: all 100ms ease-in-out;
 }
 
 .sec-6-container-2 input {
-  height: 40px;
+  height: auto;
   border: none;
   border-bottom: 2px solid #fff;
   padding: 4rem 0;
@@ -306,10 +379,19 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  stroke: black;
+  transition: all 100ms ease-in-out;
+}
+.sec-6-container-2 button:hover {
+  background: #000;
+  color: #fff;
+  stroke: white;
 }
 
 .sec-6-container-2 button svg {
   width: 20px;
+  stroke: inherit;
+  transition: all 100ms ease-in-out;
 }
 
 footer {
@@ -323,6 +405,7 @@ footer {
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
+  transition: all 100ms ease-in-out;
 }
 
 footer h2 {
@@ -330,6 +413,7 @@ footer h2 {
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
+  transition: all 100ms ease-in-out;
 }
 
 .footer-container {
@@ -337,6 +421,7 @@ footer h2 {
   gap: 1rem;
   justify-content: space-between;
   align-items: start;
+  transition: all 100ms ease-in-out;
 }
 
 .footer-container h3 {
@@ -363,4 +448,20 @@ footer h2 {
 #footer-arrow-button svg {
   width: 20px;
   transform: rotate(-90deg);
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  transition: all 200ms ease-in-out;
+}
+
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  transition: all 200ms ease-in-out;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #3d3d3d;
+  border-radius: 25px;
+  transition: all 200ms ease-in-out;
 }

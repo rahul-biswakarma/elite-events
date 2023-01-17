@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
         rel="stylesheet">
 </head>
 
@@ -43,7 +43,7 @@
     </div>
     <main id="main">
         <div id="nav">
-            <span>E</span>
+            <span class="brand-name">Elite Events</span>
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -61,11 +61,21 @@
                 </svg>
             </span>
         </div>
-        <header>
-            <button id="header-scroll-button">Scroll</button>
+        <header id="header-container">
+            <button id="header-scroll-button">SCROll</button>
+            <div id="header-image-text">
+                <span id="carousel-text-0" class="carousel-text">reception</span>
+                <span id="carousel-text-1" class="carousel-text">exposition</span>
+                <span id="carousel-text-2" class="carousel-text">convention</span>
+                <span id="carousel-text-3" class="carousel-text">outdoor</span>
+                <span id="carousel-text-4" class="carousel-text">security</span>
+                <span id="carousel-text-5" class="carousel-text">design</span>
+            </div>
+
             <div id="drag-container">
                 <div id="spin-container">
-                    <img class="carousel-image" src="./assets/images/reception.png" alt="">
+                    <img id="carousel-img-1" class="carousel-image" src="./assets/images/reception.png" alt="receptin"
+                        data-caption="Reception">
                     <img class="carousel-image" src="./assets/images/exposition.png" alt="">
                     <img class="carousel-image" src="./assets/images/convention.png" alt="">
                     <img class="carousel-image" src="./assets/images/outdoor.png" alt="">
@@ -74,10 +84,14 @@
                     <p class="carousel-text">Elite Event</p>
                 </div>
                 <div id="ground"></div>
-            </div>v>
             </div>
+            <!-- </div> -->
         </header>
         <section id="section-2">
+            <div class="sec-2-black-layer"></div>
+            <div id="sec-2-img">
+                <img src="./assets/images/reception.png" alt="">
+            </div>
             <div class="slide-text-container">
                 <div class="slide-text">WE ARE AT</div>
                 <div class="slide-text">YOUR SIDES FOR</div>
@@ -87,6 +101,7 @@
                 <div class="slide-text">TAILOR-MAMADE, FROM</div>
                 <div class="slide-text">START TO FINISH</div>
             </div>
+
         </section>
         <section id="section-3">
             <h2>Catalog</h2>
@@ -207,13 +222,21 @@
                     <h3>Email</h3>
                     <p>contact@elitevent.com</p>
                 </div>
+                <div>
+                    <h3>Social</h3>
+                    <p>Facebook</p>
+                </div>
             </div>
-            <button id="footer-arrow-button"><svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                    class="icon icon-tabler icon-tabler-arrow-narrow-right" viewBox="0 0 24 24">
-                    <path stroke="none" d="M0 0h24v24H0z" />
-                    <path d="M5 12h14m-4 4 4-4m-4-4 4 4" />
-                </svg></button>
+            <button id="footer-arrow-button">
+                <a href="#header-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="1.5"
+                        class="icon icon-tabler icon-tabler-arrow-narrow-right" viewBox="0 0 24 24">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <path d="M5 12h14m-4 4 4-4m-4-4 4 4" />
+                    </svg>
+                </a>
+            </button>
         </footer>
     </main>
 
