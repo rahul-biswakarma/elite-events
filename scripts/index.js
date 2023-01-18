@@ -83,9 +83,15 @@ window.onscroll = function (e) {
     Math.floor(this.scrollY * -0.05) + 120
   }%)`;
 
-  var sec25h = document.querySelector("#section-2-5-1 h2");
+  // var sec25h = document.querySelector("#section-2-5-1 h2");
+  // sec25h.style.transform = `translateY(${
+  //   Math.floor(this.scrollY * 0.05) - 80
+  // }%)`;
+
+  // -ve value for up
+  var sec25h = document.querySelector(".h2-container");
   sec25h.style.transform = `translateY(${
-    Math.floor(this.scrollY * 0.05) - 80
+    Math.floor(this.scrollY * 0.05) - 100
   }%)`;
 
   var sec2Img = document.querySelector("#sec-2-img img");
@@ -99,7 +105,6 @@ function scrollList(event) {
   var listWidth = list.scrollWidth;
   var containerWidth = listContainer.clientWidth;
   var left = (containerWidth - listWidth) * (event.pageX / containerWidth);
-  console.log(containerWidth, listWidth, event.pageX, left);
   list.style.left = left + "px";
 }
 
@@ -168,3 +173,19 @@ window.onload = function () {
     });
   });
 };
+
+var eventHoverImage = document.querySelector("#events-hover-image");
+var eventHoverText = document.querySelectorAll(".h2-container h2");
+var imageArr = [
+  "./assets/images/events/1.webp",
+  "./assets/images/events/2.webp",
+  "./assets/images/events/3.webp",
+  "./assets/images/events/4.webp",
+  "./assets/images/events/5.webp",
+];
+
+eventHoverText.forEach((text, i) => {
+  text.addEventListener("mouseover", () => {
+    eventHoverImage.attributes.src.value = imageArr[i];
+  });
+});
