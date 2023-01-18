@@ -80,7 +80,7 @@ window.onscroll = function (e) {
 
   var sec4Img1 = document.getElementById("sec-4-img-1");
   sec4Img1.style.transform = `translateY(${
-    Math.floor(this.scrollY * -0.05) + 120
+    Math.floor(this.scrollY * -0.05) + 140
   }%)`;
 
   // var sec25h = document.querySelector("#section-2-5-1 h2");

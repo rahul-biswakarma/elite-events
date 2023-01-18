@@ -80,11 +80,11 @@
   animation: reveal 2s cubic-bezier(0.77, 0, 0.175, 1);
   animation-fill-mode: forwards;
   color: #e6e6e6;
-  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 100ms cubic-bezier(0.77, 0, 0.175, 1);
   cursor: pointer;
 }
 
-.moving-text span :hover {
+.moving-text span:hover {
   color: #000;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .slider-text-image.animate {
-  animation: pop 2s cubic-bezier(0.77, 0, 0.175, 1);
+  animation: pop 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 @keyframes pop {
