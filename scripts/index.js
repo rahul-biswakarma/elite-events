@@ -103,6 +103,14 @@ function scrollList(event) {
   list.style.left = left + "px";
 }
 
+const images = document.querySelectorAll(".slider-text-image");
+var currentImage = 0;
+var section3 = document.getElementById("section-3");
+
+var animationDelay = 0;
+let prevX = 0;
+let prevY = 0;
+
 window.onload = function () {
   window.scrollTo(0, 0);
   window.setInterval(function () {
@@ -125,5 +133,38 @@ window.onload = function () {
   }, 1000);
   listContainer.addEventListener("mousemove", (e) => {
     scrollList(e);
+  });
+
+  section3.addEventListener("mousemove", (event) => {
+    if (
+      (Math.abs(prevY - event.clientY) > 50 ||
+        Math.abs(prevX - event.clientX) > 50) &&
+      getComputedStyle(images[currentImage], null)["animation-name"] == "none"
+    ) {
+      prevX = event.clientX;
+      prevY = event.clientY;
+      images[currentImage].style.left = event.clientX + "px";
+      images[currentImage].style.top = event.clientY + "px";
+      images[currentImage].classList.add("animate");
+    }
+    currentImage = (currentImage + 1) % images.length;
+  });
+
+  images.forEach((image) => {
+    image.addEventListener("animationend", () => {
+      image.classList.remove("animate");
+    });
+  });
+
+  const totalImages = images.length;
+  let completedAnimations = 0;
+  images.forEach((img) => {
+    img.addEventListener("animationend", () => {
+      completedAnimations++;
+      if (completedAnimations === totalImages) {
+        completedAnimations = 0;
+        currentImage = 0;
+      }
+    });
   });
 };
