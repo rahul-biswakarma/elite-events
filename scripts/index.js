@@ -85,6 +85,11 @@ window.onscroll = function (e) {
     Math.floor(this.scrollY * 0.05) - 100
   }%)`;
 
+  var sec4Img = document.querySelector("#sec-4-img-2");
+  sec4Img.style.transform = `translateY(${
+    Math.floor(this.scrollY * 0.05) - 220
+  }%)`;
+
   // Section 2 Image Scroll Scale Animation
   var sec2Img = document.querySelector("#sec-2-img img");
   sec2Img.style.width = `${Math.floor(this.scrollY * 0.05) + 30}%`;

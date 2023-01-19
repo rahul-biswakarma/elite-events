@@ -23,19 +23,22 @@
 }
 
 #section-4 .sec-4-container:nth-child(1) {
-  width: 400px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
   gap: 2rem;
   font-weight: 500;
   transform: all 200ms ease-in-out;
 }
 
 #section-4 .sec-4-container:nth-child(1) div:nth-child(1) {
-  font-size: 2rem;
+  font-size: 4rem;
   transform: all 200ms ease-in-out;
+  line-height: 90%;
 }
 
 #section-4 .sec-4-container:nth-child(1) div:nth-child(2) {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 20rem;
   line-height: 150%;
   transform: all 200ms ease-in-out;
@@ -85,10 +88,6 @@
   text-transform: uppercase;
   font-weight: 600 !important;
   line-height: 90% !important;
-}
-
-#sec-4-mq-show-button {
-  display: none;
 }
 
 @media only screen and (max-width: 1310px) {
