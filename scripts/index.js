@@ -159,6 +159,20 @@ window.onload = function () {
       }
     });
   });
+
+  // Show Search Bar
+  document.getElementById("search-icon").addEventListener("click", () => {
+    document.getElementById("search-container").style.transform =
+      "translateX(0)";
+  });
+
+  // Hide Search Bar
+  document
+    .getElementById("search-close-button")
+    .addEventListener("click", () => {
+      document.getElementById("search-container").style.transform =
+        "translateX(100%)";
+    });
 };
 
 // Section 2-5-2 Hover Image Change

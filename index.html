@@ -72,7 +72,7 @@
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <span class="nav-icon-container">
+            <span id="search-icon" class="nav-icon-container">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-linecap="round"
                     stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
                     <path stroke="none" d="M0 0h24v24H0z" />
@@ -548,6 +548,23 @@
             </button>
         </footer>
     </main>
+
+    <div id="search-container">
+        <button id="search-close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#fff" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="1.5" class="icon icon-tabler icon-tabler-x" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+        <div id="search-input-container">
+            <input type="text" name="search-input" id="search-input" placeholder="Type to search">
+        </div>
+        <div id="search-result-container">
+            <p>Sorry, currently our database is under maintenance</p>
+        </div>
+    </div>
 
     <script src="scripts/loading-screen.js"></script>
     <script src="./scripts/home-carousel.js"></script>
