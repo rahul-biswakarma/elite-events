@@ -9,7 +9,7 @@ if (window.innerWidth < 700) {
     imgWidth = Math.floor(window.innerWidth / 1.8);
   }
 } else {
-  imgWidth = Math.floor(window.innerWidth / 2.5);
+  imgWidth = Math.floor(window.innerWidth / 3.5);
 }
 
 var imgHeight = Math.floor(imgWidth / ar);
@@ -77,7 +77,7 @@ if (autoRotate) {
 }
 
 // setup events
-document.onpointerdown = function (e) {
+document.querySelector("header").onpointerdown = function (e) {
   clearInterval(dragC.timer);
   e = e || window.event;
   var sX = e.clientX,

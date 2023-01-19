@@ -1,5 +1,5 @@
 footer {
-  max-width: 100vh;
+  width: 100%;
   position: relative;
   background: #fff;
   padding: 5rem 10rem;
@@ -22,6 +22,7 @@ footer h2 {
 }
 
 .footer-container {
+  width: 100%;
   display: flex;
   gap: 1rem;
   justify-content: space-between;

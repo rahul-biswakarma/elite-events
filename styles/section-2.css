@@ -20,7 +20,7 @@
 #section-2 {
   position: relative;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .sec-2-black-layer {

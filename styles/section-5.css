@@ -3,7 +3,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
 }
 
 #sec-4-5-gap {
@@ -13,19 +12,25 @@
 }
 
 .list {
-  position: absolute;
+  width: 100%;
   left: 0;
   color: #fff;
   font-weight: 400;
   font-size: 100%;
-  display: inline-flex;
+  display: flex;
   position: relative;
   padding: 0;
-  width: auto;
   white-space: nowrap;
   user-select: none;
   margin-top: -250px;
   padding-left: 30%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.list.active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
 }
 
 .list .post-item {
@@ -139,6 +144,8 @@
   line-height: 1.6;
   letter-spacing: 1.5px;
   word-spacing: -1px;
+  word-wrap: break-word;
+  white-space: normal;
   color: #8d8d8d;
 }
 
@@ -187,15 +194,18 @@
   color: #fff;
 }
 
-#section-5::-webkit-scrollbar {
+#section-5::-webkit-scrollbar,
+.list::-webkit-scrollbar {
   width: 0;
 }
 
-#section-5::-webkit-scrollbar-track {
+#section-5::-webkit-scrollbar-track,
+.list::-webkit-scrollbar-track {
   display: none;
 }
 
-#section-5::-webkit-scrollbar-thumb {
+#section-5::-webkit-scrollbar-thumb,
+.list::-webkit-scrollbar-thumb {
   display: none;
 }
 

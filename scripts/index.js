@@ -78,22 +78,14 @@ window.onscroll = function (e) {
 
   oldScrollY = this.scrollY;
 
-  // var sec4Img1 = document.getElementById("sec-4-img-1");
-  // sec4Img1.style.transform = `translateY(${
-  //   Math.floor(this.scrollY * -0.05) + 140
-  // }%)`;
-
-  // var sec25h = document.querySelector("#section-2-5-1 h2");
-  // sec25h.style.transform = `translateY(${
-  //   Math.floor(this.scrollY * 0.05) - 80
-  // }%)`;
-
+  // Section 2-5 H2 container Scroll Animation
   // -ve value for up
   var sec25h = document.querySelector(".h2-container");
   sec25h.style.transform = `translateY(${
     Math.floor(this.scrollY * 0.05) - 100
   }%)`;
 
+  // Section 2 Image Scroll Scale Animation
   var sec2Img = document.querySelector("#sec-2-img img");
   sec2Img.style.width = `${Math.floor(this.scrollY * 0.05) + 30}%`;
   sec2Img.style.height = `${Math.floor(this.scrollY * 0.05) + 30}%`;
@@ -109,6 +101,7 @@ let prevY = 0;
 
 window.onload = function () {
   window.scrollTo(0, 0);
+
   window.setInterval(function () {
     const carouselImages = document.querySelectorAll(".carousel-image");
 
@@ -127,10 +120,8 @@ window.onload = function () {
       }
     });
   }, 1000);
-  // listContainer.addEventListener("mousemove", (e) => {
-  //   scrollList(e);
-  // });
 
+  // Section 3 Cursor image trail animation
   section3.addEventListener("mousemove", (event) => {
     if (
       (Math.abs(prevY - event.clientY) > 50 ||
@@ -165,6 +156,7 @@ window.onload = function () {
   });
 };
 
+// Section 2-5-2 Hover Image Change
 var eventHoverImage = document.querySelector("#events-hover-image");
 var eventHoverText = document.querySelectorAll(".h2-container h2");
 var imageArr = [
@@ -179,4 +171,62 @@ eventHoverText.forEach((text, i) => {
   text.addEventListener("mouseover", () => {
     eventHoverImage.attributes.src.value = imageArr[i];
   });
+});
+
+const slider = document.querySelector(".list");
+var isDown = false;
+var startX;
+var scrollLeft;
+
+// Blog list scroll
+slider.addEventListener("mousedown", (e) => {
+  isDown = true;
+  slider.classList.add("active");
+  startX = e.pageX - slider.offsetLeft;
+  scrollLeft = slider.scrollLeft;
+});
+
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  slider.scrollLeft = scrollLeft - walk;
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
+
+  if ("IntersectionObserver" in window) {
+    let lazyImageObserver = new IntersectionObserver(function (
+      entries,
+      observer
+    ) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          let lazyImage = entry.target;
+          lazyImage.src = lazyImage.dataset.src;
+          lazyImage.srcset = lazyImage.dataset.srcset;
+          lazyImage.classList.remove("lazy");
+          lazyImageObserver.unobserve(lazyImage);
+        }
+      });
+    });
+
+    lazyImages.forEach(function (lazyImage) {
+      lazyImageObserver.observe(lazyImage);
+    });
+  } else {
+    // Possibly fall back to event handlers here
+  }
 });
