@@ -1,7 +1,10 @@
 var autoRotate = true;
 var rotateSpeed = -60;
 var ar = 1.45;
-var imgWidth = Math.floor(window.innerWidth / 3.5);
+var imgWidth =
+  window.innerWidth > 700
+    ? Math.floor(window.innerWidth / 3.5)
+    : Math.floor(window.innerWidth / 2.5);
 var imgHeight = Math.floor(imgWidth / ar);
 var radius = Math.round(imgWidth);
 

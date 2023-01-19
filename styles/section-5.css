@@ -233,6 +233,7 @@
   justify-content: center;
   stroke: black;
   transition: all 100ms ease-in-out;
+  border: none;
 }
 #section-5 button:hover {
   background: #000;

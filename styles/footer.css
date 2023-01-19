@@ -45,8 +45,9 @@ footer h2 {
   align-items: center;
   justify-content: center;
   position: absolute;
-  left: 01rem;
+  left: 1rem;
   bottom: 1rem;
+  border: none;
 }
 
 #footer-arrow-button svg {
