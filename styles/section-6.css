@@ -62,6 +62,11 @@
   background: #000;
   text-transform: uppercase;
   margin-bottom: 7rem;
+  color: white;
+}
+
+.sec-6-container-2 input:focus {
+  outline: none;
 }
 
 .sec-6-container-2 button {
@@ -115,6 +120,12 @@
   .sec-6-container h2 {
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .sec-6-container-2 input {
+    font-size: 2rem;
   }
 }
 

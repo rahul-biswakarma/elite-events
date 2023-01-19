@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 3rem;
   padding: 5rem 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .pointer-image {
