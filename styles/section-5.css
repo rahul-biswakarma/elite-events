@@ -3,7 +3,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #sec-4-5-gap {

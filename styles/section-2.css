@@ -20,7 +20,7 @@
 #section-2 {
   position: relative;
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .sec-2-black-layer {
@@ -32,6 +32,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
   transition: all 200ms ease-in-out;
+  overflow: hidden;
 }
 
 #sec-2-img {
@@ -121,7 +122,7 @@
   height: max-content;
   display: grid;
   grid-template-columns: 40% 60%;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #section-2-5-2 .image-container {

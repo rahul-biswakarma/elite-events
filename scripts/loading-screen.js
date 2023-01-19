@@ -25,9 +25,9 @@ function LoadingComplete() {
     applyTranform(dragC);
   }, 1000);
 
-  setTimeout(function () {
-    document.querySelector("body").style.overflow = "auto";
-  }, 2000);
+  // setTimeout(function () {
+  //   document.querySelector("body").style.overflow = "auto";
+  // }, 2000);
 
   setTimeout(function () {
     document.getElementById("drag-container").style.transition = "none";
