@@ -182,4 +182,7 @@ header {
 }
 
 @media only screen and (max-width: 700px) {
+  header {
+    height: 80vh;
+  }
 }

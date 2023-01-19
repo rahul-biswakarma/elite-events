@@ -87,6 +87,10 @@
   line-height: 90% !important;
 }
 
+#sec-4-mq-show-button {
+  display: none;
+}
+
 @media only screen and (max-width: 1310px) {
   #sec-4-mq-hide {
     display: none;
@@ -95,6 +99,10 @@
   #sec-4-mq-show {
     display: block;
     font-size: 5rem;
+  }
+
+  #sec-4-mq-show-button {
+    display: block;
   }
 
   #section-4 .sec-4-container:nth-child(1) {
