@@ -217,6 +217,9 @@
 }
 
 @media only screen and (max-width: 520px) {
+  #section-2-5-2 .h2-container h2 {
+    padding-right: 0;
+  }
   #section-2-5-2 .h2-container h2 span {
     display: none;
   }
