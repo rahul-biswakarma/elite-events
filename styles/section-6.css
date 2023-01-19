@@ -5,7 +5,7 @@
   background: #000;
   padding: 8rem 10rem;
   margin-top: 5rem;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 #section-6 h2 {

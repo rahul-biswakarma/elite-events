@@ -49,36 +49,30 @@ async function LoadignMain() {
   await new Promise((res) =>
     setTimeout(() => {
       res(LoadingComplete());
-    }, 7000)
+    }, 6000)
   );
 }
 
+var loadingPercentage = 0;
+
 document.addEventListener("DOMContentLoaded", () => {
   window.scrollTo(0, 0);
-  // var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-
-  // if ("IntersectionObserver" in window) {
-  //   let lazyImageObserver = new IntersectionObserver(function (
-  //     entries,
-  //     observer
-  //   ) {
-  //     entries.forEach(function (entry) {
-  //       if (entry.isIntersecting) {
-  //         let lazyImage = entry.target;
-  //         lazyImage.src = lazyImage.dataset.src;
-  //         lazyImage.srcset = lazyImage.dataset.srcset;
-  //         lazyImage.classList.remove("lazy");
-  //         lazyImageObserver.unobserve(lazyImage);
-  //       }
-  //     });
-  //   });
-
-  //   lazyImages.forEach(function (lazyImage) {
-  //     lazyImageObserver.observe(lazyImage);
-  //   });
-  // } else {
-  //   // Possibly fall back to event handlers here
-  // }
   LoadingImageCarousel();
   LoadignMain();
+  nextLoader();
 });
+
+var count = 0;
+var loadingPercentage = document.querySelector("#loading-percentage");
+
+function startLoader() {
+  loadingPercentage.innerHTML = count + "%";
+  nextLoader();
+}
+
+function nextLoader() {
+  if (count < 100) {
+    count++;
+    setTimeout(startLoader, 45);
+  }
+}
