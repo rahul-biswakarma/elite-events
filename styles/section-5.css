@@ -24,6 +24,7 @@
   user-select: none;
   margin-top: -250px;
   padding-left: 30%;
+  padding-right: 5%;
   overflow-x: scroll;
   overflow-y: hidden;
 }
@@ -133,6 +134,7 @@
   color: #000;
   text-transform: uppercase;
   word-break: break-word;
+  white-space: normal;
 }
 
 .content .txt {
@@ -163,11 +165,12 @@
   vertical-align: baseline;
   text-decoration: none;
   color: inherit;
+  height: max-content;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 22px 35px;
+  padding: 1.5rem 2rem;
   border-radius: 45px;
   cursor: pointer;
   font-size: 12px;

@@ -67,6 +67,16 @@
 
 .sec-6-container-2 input:focus {
   outline: none;
+  border-color: #fff;
+}
+
+#email-submit-status {
+  padding: 1rem 0;
+  position: absolute;
+  font-size: 15px;
+  bottom: 2rem;
+  left: 0;
+  transition: all 100ms ease-in-out;
 }
 
 .sec-6-container-2 button {
@@ -82,11 +92,13 @@
   stroke: black;
   transition: all 100ms ease-in-out;
   border: none;
+  border: 2px solid #000;
 }
 .sec-6-container-2 button:hover {
   background: #000;
   color: #fff;
   stroke: white;
+  border: 2px solid #fff;
 }
 
 .sec-6-container-2 button svg {
