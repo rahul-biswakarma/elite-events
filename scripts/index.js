@@ -99,15 +99,6 @@ window.onscroll = function (e) {
   sec2Img.style.height = `${Math.floor(this.scrollY * 0.05) + 30}%`;
 };
 
-var listContainer = document.getElementById("section-5");
-function scrollList(event) {
-  var list = document.getElementById("list-container");
-  var listWidth = list.scrollWidth;
-  var containerWidth = listContainer.clientWidth;
-  var left = (containerWidth - listWidth) * (event.pageX / containerWidth);
-  list.style.left = left + "px";
-}
-
 const images = document.querySelectorAll(".slider-text-image");
 var currentImage = 0;
 var section3 = document.getElementById("section-3");
@@ -136,9 +127,9 @@ window.onload = function () {
       }
     });
   }, 1000);
-  listContainer.addEventListener("mousemove", (e) => {
-    scrollList(e);
-  });
+  // listContainer.addEventListener("mousemove", (e) => {
+  //   scrollList(e);
+  // });
 
   section3.addEventListener("mousemove", (event) => {
     if (

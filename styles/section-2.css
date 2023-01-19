@@ -223,4 +223,13 @@
   #section-2-5-2 .h2-container h2 span {
     display: none;
   }
+  .slide-text {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .slide-text {
+    font-size: 2rem;
+  }
 }

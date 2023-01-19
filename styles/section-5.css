@@ -29,7 +29,6 @@
 }
 
 .list .post-item {
-  touch-action: pan-y;
   color: #fff;
   user-select: none;
   display: block;
@@ -45,7 +44,6 @@
 }
 
 .block-post {
-  touch-action: pan-y;
   color: #fff;
   user-select: none;
   display: flex;
