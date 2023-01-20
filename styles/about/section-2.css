@@ -1,0 +1,25 @@
+#section-2 {
+  background-color: #000;
+  color: #ababab;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding: 10rem 0;
+}
+
+#section-2 p {
+  width: 100%;
+  max-width: 800px;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  padding-bottom: 2rem;
+}
+
+#section-2 p:last-child {
+  padding-bottom: 0;
+}
