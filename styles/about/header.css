@@ -153,3 +153,21 @@ header {
     opacity: 0;
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .moving-text-span {
+    font-size: 10vw;
+  }
+  header {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .moving-text-span {
+    font-size: 20vw;
+  }
+  header {
+    height: 40vh;
+  }
+}
