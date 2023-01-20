@@ -1,0 +1,50 @@
+#ham-menu {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  z-index: 999;
+  padding: 3rem 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid white;
+  transform: translateX(100%);
+  transition: all 200ms ease-in-out;
+}
+
+#ham-menu button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  background: none;
+  width: auto;
+}
+
+#ham-menu button svg {
+  width: 25px;
+  height: auto;
+}
+
+#ham-menu ul li a:hover {
+  color: #fff;
+}
+
+#ham-menu ul li a {
+  text-decoration: none;
+  color: #a6a6a6;
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 100ms ease-in-out;
+  padding: 0.5rem 1rem;
+}
+
+#ham-menu ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 4rem;
+}

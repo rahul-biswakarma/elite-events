@@ -234,3 +234,15 @@
     width: 100%;
   }
 }
+
+@media only screen and (max-width: 750px) {
+  .loading-text span {
+    font-size: 10vw;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .loading-text span {
+    font-size: 20vw;
+  }
+}

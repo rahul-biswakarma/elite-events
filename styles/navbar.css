@@ -31,6 +31,22 @@
   gap: 4rem;
 }
 
+#nav-icon-container {
+  display: flex;
+  gap: 1rem;
+}
+
+#ham-icon {
+  display: none;
+}
+
+.logo {
+  width: 30px;
+  height: auto;
+  object-fit: cover;
+  display: none;
+}
+
 #nav ul li a {
   text-decoration: none;
   color: #a6a6a6;
@@ -71,10 +87,23 @@
   #nav ul {
     display: none;
   }
+  #ham-icon {
+    display: flex;
+  }
 }
 
 @media only screen and (max-width: 500px) {
   #nav {
     padding: 0 2rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .logo {
+    display: block;
+  }
+
+  .brand-name {
+    display: none;
   }
 }

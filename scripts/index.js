@@ -173,6 +173,18 @@ window.onload = function () {
       document.getElementById("search-container").style.transform =
         "translateX(100%)";
     });
+
+  // Show Ham menu
+  document.getElementById("ham-icon").addEventListener("click", () => {
+    document.getElementById("ham-menu").style.transform = "translateX(0)";
+  });
+
+  // Hide Search Bar
+  document
+    .getElementById("ham-menu-close-button")
+    .addEventListener("click", () => {
+      document.getElementById("ham-menu").style.transform = "translateX(100%)";
+    });
 };
 
 // Section 2-5-2 Hover Image Change

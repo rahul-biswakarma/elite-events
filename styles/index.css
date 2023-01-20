@@ -8,6 +8,7 @@
 @import url(./section-6.css);
 @import url(./footer.css);
 @import url(./search.css);
+@import url(./ham-menu.css);
 
 * {
   margin: 0;
