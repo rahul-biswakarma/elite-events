@@ -85,6 +85,30 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     // Possibly fall back to event handlers here
   }
+
+  // Paragraph Animation
+  var pTags = document.querySelectorAll("p");
+
+  window.addEventListener("scroll", function () {
+    for (var i = 0; i < pTags.length; i++) {
+      var pTag = pTags[i];
+      var pTagTop = pTag.getBoundingClientRect().top;
+      var pTagBottom = pTag.getBoundingClientRect().bottom;
+
+      if (pTagTop < window.innerHeight && pTagBottom > 0) {
+        // element is visible in viewport
+        pTag.style.transform = "translateX(0)";
+        pTag.style.opacity = 1;
+      } else {
+        if (i % 2 == 0) {
+          pTag.style.transform = "translateX(-100%)";
+        } else {
+          pTag.style.transform = "translateX(100%)";
+        }
+        pTag.style.opacity = 0;
+      }
+    }
+  });
 });
 
 function ValidateEmail(mail) {
