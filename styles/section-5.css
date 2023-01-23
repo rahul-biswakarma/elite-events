@@ -57,7 +57,7 @@
 	transform: translateY(-50%);
 	z-index: 999;
 	cursor: pointer;
-	width: 50px;
+	width: 30px;
 	opacity: 0.3;
 	transition: all 200ms ease-in-out;
 }
