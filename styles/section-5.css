@@ -27,6 +27,7 @@
 	padding-right: 5%;
 	overflow-x: scroll;
 	overflow-y: hidden;
+	cursor: grab;
 }
 
 .list.active {

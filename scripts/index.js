@@ -229,6 +229,12 @@ var startX;
 var scrollLeft;
 
 // Blog list scroll
+document
+	.getElementById("blog-container-arrow")
+	.addEventListener("click", () => {
+		slider.scrollLeft += 300;
+	});
+
 slider.addEventListener("mousedown", (e) => {
 	isDown = true;
 	slider.classList.add("active");
@@ -254,6 +260,7 @@ slider.addEventListener("mousemove", (e) => {
 	slider.scrollLeft = scrollLeft - walk;
 });
 
+// Lazy Loading
 document.addEventListener("DOMContentLoaded", function () {
 	var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
 
@@ -281,6 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 });
 
+// Email Validation
 function ValidateEmail(mail) {
 	if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
 		return true;
@@ -288,6 +296,7 @@ function ValidateEmail(mail) {
 	return false;
 }
 
+// Validating email from newsletter input
 document.getElementById("email-input").addEventListener("click", () => {
 	document.getElementById("email-input").style.borderColor = "white";
 	document.getElementById("email-submit-status").innerHTML = "";
